@@ -1,0 +1,16 @@
+body{
+    box-sizing: border-box;
+    background: #442e43;
+    margin: auto;
+}
+
+#alert{
+    color: #ffe4fc;
+    background: #8c336f;
+    text-align: center;
+    height: 3vh;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
