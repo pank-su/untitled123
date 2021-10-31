@@ -89,7 +89,8 @@ header .reg:hover{
     color: ivory;
 }
 
-#tel_new img{
+
+#now img, #tel_new img{
     max-width: 100%;
     max-height: 100%;
     border: none;
@@ -101,10 +102,14 @@ header .reg:hover{
     background-color: #50506e;
     border-radius: 20px;
     height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 #news h1{
-    color: #638b96;
+    color: #c3c4ff;
     text-align: center;
+    margin-top: -20px;
 }
 
 .logo\&text{
@@ -119,4 +124,17 @@ header .reg:hover{
 }
 .logo\&text img{
     margin-top: 20px;
+}
+
+#now p, #tel_new p{
+    margin: auto;
+    text-align: center;
+}
+#now a, #tel_new a{
+    text-decoration: none;
+    color: #c3c4ff;
+}
+
+#now a, #tel_new a:visited{
+    color: #c3c4ff;
 }
