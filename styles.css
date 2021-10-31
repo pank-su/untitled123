@@ -7,6 +7,8 @@ body{
     --main-bg-color: #442e43;
     background: var(--main-bg-color);
     margin: 10px 20px 0 20px;
+    min-height: 700px;
+    min-width: 950px;
 }
 
 #alert{
@@ -25,7 +27,7 @@ header{
     height: 20%;
 }
 
-.logo{
+.logo\&text{
     cursor: pointer;
 }
 
@@ -44,7 +46,7 @@ header{
     transition: color 0.3s ease 0s;
 }
 .nav_links li{
-    background-color: var(--main-bg-color);
+    background-color: rgba(255,253,249,0);
     transition: background-color 0.3s ease 0s;
     border: none;
     border-radius: 50px;
@@ -60,7 +62,7 @@ header{
     padding: 0 20px;
 }
 
-header button{
+header .login{
     background-color: #d076ff;
     color: ivory;
     border-radius: 50px;
@@ -69,21 +71,52 @@ header button{
     height: 30px;
     border: none;
 }
-header button:hover{
+header .login:hover{
     background-color: #ac62ff;
 }
+header .reg{
+    background-color: #f3a0ba;
+    color: #8c336f;
+    border: none;
+    border-radius: 50px;
+    width: 125px;
+    height: 30px;
+    transition: all 0.3s ease 0s;
+}
+
+header .reg:hover{
+    background-color: #9565d2;
+    color: ivory;
+}
+
 #tel_new img{
     max-width: 100%;
     max-height: 100%;
+    border: none;
+    border-radius: 5px;
 }
 
 #news{
     width: 25%;
     background-color: #50506e;
     border-radius: 20px;
-    height: 70vh;
+    height: 75vh;
 }
 #news h1{
     color: #638b96;
     text-align: center;
+}
+
+.logo\&text{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo\&text p{
+    color: #54cbd2;
+    font-size: 35px;
+    margin-left: 15px;
+}
+.logo\&text img{
+    margin-top: 20px;
 }
