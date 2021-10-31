@@ -47,7 +47,7 @@ header{
 }
 .nav_links li{
     background-color: rgba(255,253,249,0);
-    transition: background-color 0.3s ease 0s;
+    transition: background-color 0.4s ease 0s;
     border: none;
     border-radius: 50px;
 }
@@ -66,7 +66,7 @@ header .login{
     background-color: #d076ff;
     color: ivory;
     border-radius: 50px;
-    transition: background-color 0.3s ease 0s;
+    transition: background-color 0.4s ease 0s;
     width: 100px;
     height: 30px;
     border: none;
@@ -81,7 +81,7 @@ header .reg{
     border-radius: 50px;
     width: 125px;
     height: 30px;
-    transition: all 0.3s ease 0s;
+    transition: all 0.4s ease 0s;
 }
 
 header .reg:hover{
@@ -101,7 +101,7 @@ header .reg:hover{
     width: 25%;
     background-color: #50506e;
     border-radius: 20px;
-    height: 75vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -129,6 +129,7 @@ header .reg:hover{
 #now p, #tel_new p{
     margin: auto;
     text-align: center;
+    height: 40px;
 }
 #now a, #tel_new a{
     text-decoration: none;
@@ -137,4 +138,22 @@ header .reg:hover{
 
 #now a, #tel_new a:visited{
     color: #c3c4ff;
+}
+.basket{
+    background-color: #bfffa5;
+    border-radius: 20px;
+    border: none;
+    height: 30px;
+    width: 50px;
+    transition: background-color 0.4s ease 0s;
+}
+.basket:hover{
+    background-color: #b2ffe2;
+}
+.buttons{
+    display: flex;
+    margin-left: 2px;
+}
+.buttons a{
+    margin-left: 10px;
 }
