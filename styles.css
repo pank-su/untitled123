@@ -1,10 +1,12 @@
-
+body {
+    height:100%
+}
 
 body{
     box-sizing: border-box;
     --main-bg-color: #442e43;
     background: var(--main-bg-color);
-    margin: auto;
+    margin: 10px 20px 0 20px;
 }
 
 #alert{
@@ -13,7 +15,6 @@ body{
     text-align: center;
     height: 20px;
     padding: 10px;
-    margin: 10px 20px 0 20px;
     border-radius: 5px;
 }
 
@@ -21,8 +22,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
     height: 20%;
 }
 
@@ -79,13 +78,10 @@ header button:hover{
 }
 
 #news{
-    width: 20%;
-    height: 80%;
+    width: 25%;
     background-color: #50506e;
     border-radius: 20px;
-    display: flex;
-    flex-flow: column;
-    flex-grow : 1;
+    height: 70vh;
 }
 #news h1{
     color: #638b96;
