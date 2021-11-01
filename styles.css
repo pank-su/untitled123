@@ -52,6 +52,7 @@ header{
 }
 .nav_links li a:hover{
     color: #442e43;
+    cursor: pointer;
 }
 .nav_links li{
     display: inline-block;
