@@ -18,9 +18,9 @@
     </div>
     <nav>
         <ul class="nav_links">
-            <li><a href="#">Меню</a></li>
-            <li><a href="#">Наши заведения</a></li>
-            <li><a href="#">О нас</a></li>
+            <li><a onclick="document.getElementById('content_frame').src = 'menu.html'">Меню</a></li>
+            <li><a onclick="document.getElementById('content_frame').src = 'our_edt.html'">Наши заведения</a></li>
+            <li><a onclick="document.getElementById('content_frame').src = 'about.html'">О нас</a></li>
         </ul>
     </nav>
     <div class="buttons">
@@ -29,17 +29,25 @@
         <a><button class="login">Вход</button></a>
     </div>
 </header>
-<div id="news">
-    <h1> Новости</h1>
-    <div id="tel_new">
-        <a href="https://telegram.org"><img class="telegram_img" src="telegram.png" alt="telegram_img"></a>
-        <p><a href="https://telegram.org">Мы в телеграм </a></p>
+<div id="all_content">
+    <div id="news">
+        <h1> Новости</h1>
+        <div id="tel_new">
+            <a href="https://telegram.org"><img class="telegram_img" src="telegram.png" alt="telegram_img"></a>
+            <p><a href="https://telegram.org">Мы в телеграм </a></p>
+        </div>
+        <div id="now">
+            <a href="https://yandex.ru/maps/-/CCUuAVsyLB"><img class="nov_img" src="nov_izhora.png" alt="telegram_img"></a>
+            <p><a href="https://yandex.ru/maps/-/CCUuAVsyLB"> Доставляем прямо в новую ижору </a></p>
+        </div>
+        <div></div>
     </div>
-    <div id="now">
-        <a href="https://yandex.ru/maps/-/CCUuAVsyLB"><img class="nov_img" src="nov_izhora.png" alt="telegram_img"></a>
-        <p><a href="https://yandex.ru/maps/-/CCUuAVsyLB"> Доставляем прямо в новую ижору </a></p>
+    <div id="content">
+        <iframe id="content_frame" src="general.html" width="100%" height="100%"></iframe>
     </div>
-    <div></div>
 </div>
+
 </body>
+<script>
+</script>
 </html>
