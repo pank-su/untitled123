@@ -49,8 +49,55 @@
             <div><p>Вес: </p><button>В корзину</button></div>
         </div>
     </div>
-
 </div>
-
+<div id="pages">
+    <button class="dot_btn"><span class="dot"></span></button>
+    <button class="dot_btn"><span class="dot"></span></button>
+    <button class="dot_btn"><span class="dot"></span></button>
+    <button class="dot_btn"><span class="dot"></span></button>
+</div>
 </body>
+<script>
+    var array;
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://c5c2-188-244-132-138.ngrok.io', false);
+    let dict_ = {'query': 'dishes'}
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify(dict_));
+    if (xhr.status !== 200) {
+        alert(xhr.status + ': ' + xhr.statusText);
+    } else {
+        array = JSON.parse(xhr.responseText)
+        console.log(array)
+        for (let i = 0; i < 6; i++) {
+            let el = document.getElementById(i.toString())
+            el.innerHTML = '<img src="' + array[i][3] + '" alt="суши">\n' +
+                '            <h1>' + array[i][0] + '</h1>\n' +
+                '            <p>' + array[i][2] + '</p>\n' +
+                '            <div><p>Вес: ' + array[i][1] + '</p><button>В корзину</button></div>'
+        }
+    }
+    let text = ""
+    for (let o = 0; o <= array.length / 6; o++){
+        text += '<button onclick="set_page(parseInt(this.name))" name="' + o + '" class="dot_btn"><span class="dot"></span></button>'
+    }
+    document.getElementById("pages").innerHTML = text
+
+    function set_page(n){
+        console.log(array)
+        for (let j = 0; j < 6; j++) {
+            let i = j + n * 6
+            let el = document.getElementById(j.toString())
+            try {
+                el.innerHTML = '<img src="' + array[i][3] + '" alt="суши">\n' +
+                    '            <h1>' + array[i][0] + '</h1>\n' +
+                    '            <p>' + array[i][2] + '</p>\n' +
+                    '            <div><p>Вес: ' + array[i][1] + '</p><button>В корзину</button></div>'
+            } catch (e){
+                el.innerHTML = ""
+            }
+
+        }
+    }
+</script>
 </html>

@@ -12,6 +12,8 @@ h1{
 img{
     max-height: 100%;
     max-width: 100%;
+    border: none;
+    border-radius: 10px;
 }
 #menu{
     display: flex;
@@ -51,4 +53,24 @@ img{
 }
 .menu_item_ button:hover{
     background-color: #b2ffe2;
+}
+.dot {
+    height: 7px;
+    width: 7px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s ease 0s;
+}
+#pages{
+    width: 50%;
+    margin-left: 50%;
+}
+.dot_btn{
+    background: none;
+    border: none;
+
+}
+.dot:hover{
+    background-color: #bfffa5;
 }
