@@ -6,6 +6,8 @@ body{
 }
 h1{
     text-align: center;
+    color: #b9b17f;
+    margin-top: auto;
 }
 img{
     max-height: 100%;
@@ -26,4 +28,27 @@ img{
     flex-direction: row;
     row-gap: 20px;
     column-gap: 20px;
+}
+.menu_item_ p{
+    margin-top: auto;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #bfa3a7;
+}
+.menu_item_ h1{
+    font-size: 14px;
+}
+.menu_item_ div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.menu_item_ button{
+    border: none;
+    background-color: #77fff5;
+    border-radius: 50px;
+    transition: background-color 0.4s ease 0s;
+}
+.menu_item_ button:hover{
+    background-color: #b2ffe2;
 }
