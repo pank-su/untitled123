@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="login.css" rel="stylesheet">
     <title>Title</title>
 </head>
 <body>
-
+<h1>Войти в аккаунт</h1>
+<form action="http://localhost:4567/login" method="post">
+    <label for="email">Почта</label>
+    <input id="email" type="text" placeholder="email">
+    <label for="password">Пароль</label>
+    <input id="password" type="password" placeholder="Пароль">
+    <input type="submit" value="Войти">
+</form>
 </body>
 </html>
