@@ -1,0 +1,29 @@
+html{
+    height: 100%;
+}
+body{
+    height: 95%;
+}
+h1{
+    text-align: center;
+}
+img{
+    max-height: 100%;
+    max-width: 100%;
+}
+#menu{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    column-gap: 20px;
+    /*display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    height: 100%;*/
+}
+.menu_item{
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+    column-gap: 20px;
+}
