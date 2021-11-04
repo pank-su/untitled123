@@ -12,7 +12,7 @@
     <p id="3">Почта:</p>
     <p id="2">Телефон:</p>
     <p id="5">Ваши прошлые заказы:</p>
-    <button>Выйти</button>
+    <button onclick="clear_cookie()">Выйти</button>
 </div>
 </body>
 <script>
@@ -26,10 +26,15 @@
         alert(xhr.status + ': ' + xhr.statusText);
     } else {
         array = JSON.parse(xhr.responseText)
-        document.getElementById("1").innerText = array[1]
-        document.getElementById("2").innerText = array[2]
-        document.getElementById("3").innerText = array[3]
-        document.getElementById("5").innerText = array[5]
+        document.getElementById("1").innerText += array[1]
+        document.getElementById("2").innerText += array[2]
+        document.getElementById("3").innerText += array[3]
+        document.getElementById("5").innerText += array[5]
+    }
+    function clear_cookie(){
+        document.cookie = "has_login=false; SameSite=None; Secure";
+        document.cookie = "login=null; SameSite=None; Secure";
+        window.top.location.reload()
     }
 
 </script>
