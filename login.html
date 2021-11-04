@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="login.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Title</title>
 </head>
 <body>
@@ -17,9 +18,12 @@
     <label for="password">Пароль</label>
     <input id="password" type="password" placeholder="Пароль">
     <div class="btns">
-        <button class="btn" id="reg" onclick="parent.change_iframe('register.html')">Регистрация</button>
-        <button class="btn" id="submit">Войти</button>
+        <!--<button class="btn" id="reg" onclick="parent.change_iframe('register.html')">Регистрация</button>-->
+        <button class="btn" id="submit" onclick="window.top.location.reload()">Войти</button>
     </div>
 </form>
 </body>
+<script>
+
+</script>
 </html>
