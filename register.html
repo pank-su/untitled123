@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="login.css" rel="stylesheet">
     <title>Title</title>
 </head>
 <body>
-
+<h1>Войти в аккаунт</h1>
+<form>
+    <label for="login">Логин</label>
+    <input id="login" type="text" placeholder="Логин">
+    <label for="email">Email</label>
+    <input id="email" type="text" placeholder="Email">
+    <label for="telephone">Телефон(любой, хоть пустой, он не используется в дальнейшем)</label>
+    <input id="telephone" type="text" placeholder="Любой телефон">
+    <label for="password">Пароль</label>
+    <input id="password" type="password" placeholder="Пароль">
+    <input id="password_2" type="password" placeholder="Пароль ещё раз">
+    <div class="btns">
+        <!--<button class="btn" id="reg" onclick="window.top.change_iframe('register.html')">Регистрация</button>-->
+        <button class="btn" id="reg" onclick="login_fnc()">Зарегестрироваться</button>
+    </div>
+</form>
 </body>
+<script>
+    function login_fnc() {
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://c5c2-188-244-132-138.ngrok.io/reg', false);
+        let dict_ = {
+            'login': document.getElementById("login").value,
+            "password": document.getElementById("password").value,
+            "telephone": document.getElementById("telephone").value,
+            "email": document.getElementById("email").value
+        }
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.send(JSON.stringify(dict_));
+        if (xhr.status !== 200) {
+            alert(xhr.status + ': ' + xhr.statusText);
+        } else {
+            if (JSON.parse(xhr.responseText)) {
+
+                window.top.location.reload()
+            } else {
+                alert("Этот ник занят или произошла ошибка.")
+            }
+        }
+    }
+</script>
 </html>

@@ -12,7 +12,7 @@ form{
     color: #ff7989;
 }
 form input{
-    width: 16%;
+    width: 150px;
     margin-top: 5px;
     margin-bottom: 5px;
     border: #9565d2 1px;
@@ -29,7 +29,7 @@ form input{
 #reg{
     background-color: #f3a0ba;
     color: #8c336f;
-    width: 115px;
+    width: 150px;
     height: 30px;
     transition: all 0.4s ease 0s;
 }
@@ -50,5 +50,10 @@ header .login:hover{
     background-color: #ac62ff;
 }
 #alert{
-    visibility: hidden;
+    color: #ffe4fc;
+    background: #8c336f;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
 }

@@ -4,26 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="login.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Title</title>
 </head>
 <body>
 <h1>Войти в аккаунт</h1>
 <form>
-    <div id="alert">
-
-    </div>
-    <label for="email">Почта</label>
-    <input id="email" type="text" placeholder="email">
+    <label for="login">Логин</label>
+    <input id="login" type="text" placeholder="Логин">
     <label for="password">Пароль</label>
     <input id="password" type="password" placeholder="Пароль">
     <div class="btns">
-        <button class="btn" id="reg" onclick="window.top.change_iframe('register.html')">Регистрация</button>
-        <button class="btn" id="submit" onclick="window.top.location.reload()">Войти</button>
+        <!--<button class="btn" id="reg" onclick="window.top.change_iframe('register.html')">Регистрация</button>-->
+        <button class="btn" id="submit" onclick="login_fnc()">Войти</button>
     </div>
 </form>
 </body>
 <script>
-
+    function login_fnc(){
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://c5c2-188-244-132-138.ngrok.io/login', false);
+        let dict_ = {'login': document.getElementById("login").value, "password": document.getElementById("password").value}
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.send(JSON.stringify(dict_));
+        if (xhr.status !== 200) {
+            alert(xhr.status + ': ' + xhr.statusText);
+        } else {
+            if (JSON.parse(xhr.responseText)){
+                document.cookie = "has_login=true; SameSite=None; Secure";
+                document.cookie = "login=" + document.getElementById("login") + "; SameSite=None; Secure";
+                window.top.location.reload()
+            } else {
+                alert("Неверный логин или пароль")
+            }
+        }
+    }
 </script>
 </html>
