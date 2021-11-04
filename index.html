@@ -67,9 +67,10 @@
     // <li><a onClick="window.location = window.location.hostname + '?select_window=our_edt.html'">Наши заведения</a></li>
     // <li><a onClick="window.location = window.location.hostname + '?select_window=about.html'">О нас</a></li>
     if (document.cookie.split('; ').find(row => row.startsWith('has_login=')).split('=')[1] == "true"){
+        console.log(document.cookie.split('; ').find(row => row.startsWith('has_login=')).split('=')[1])
         document.getElementById("reg").style.display = "none";
         document.getElementById("log").innerText = "Профиль"
-        document.getElementById("log").onclick = document.getElementById('content_frame').src = 'profile.html';
+        document.getElementById("log").onclick = function (){document.getElementById('content_frame').src = 'profile.html'};
     }
 
     function change_iframe(str) {
