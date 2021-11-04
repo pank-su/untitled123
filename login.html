@@ -8,12 +8,18 @@
 </head>
 <body>
 <h1>Войти в аккаунт</h1>
-<form action="http://localhost:4567/login" method="post">
+<form>
+    <div id="alert">
+
+    </div>
     <label for="email">Почта</label>
     <input id="email" type="text" placeholder="email">
     <label for="password">Пароль</label>
     <input id="password" type="password" placeholder="Пароль">
-    <input type="submit" value="Войти">
+    <div class="btns">
+        <button class="btn" id="reg" onclick="parent.change_iframe('register.html')">Регистрация</button>
+        <button class="btn" id="submit">Войти</button>
+    </div>
 </form>
 </body>
 </html>
