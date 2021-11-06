@@ -22,7 +22,7 @@
 <script>
     function login_fnc(){
         let xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://c5c2-188-244-132-138.ngrok.io/login', false);
+        xhr.open('POST', 'https://dfa4-188-244-132-138.ngrok.io/login', false);
         let dict_ = {'login': document.getElementById("login").value, "password": document.getElementById("password").value}
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhr.send(JSON.stringify(dict_));
